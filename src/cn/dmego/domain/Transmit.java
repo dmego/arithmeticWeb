@@ -1,6 +1,6 @@
 package cn.dmego.domain;
 /**
- * 辅助分数运算的工具类
+ * 辅助分数运算的工具类，
  * @author dmego
  *
  */
