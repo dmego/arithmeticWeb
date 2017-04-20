@@ -18,6 +18,10 @@ public class GradeServlet extends HttpServlet {
 		//---解决乱码问题---
 				request.setCharacterEncoding("UTF-8");
 				response.setContentType("text/html;charset=utf-8");
+<<<<<<< HEAD
+=======
+				
+>>>>>>> origin/master
 				int grade= Integer.parseInt(request.getParameter("Grade"));
 				System.out.println(grade);
 				ProAns[] proBean = new ProAns[10]; 

@@ -1,15 +1,27 @@
 package cn.dmego.web;
+<<<<<<< HEAD
 /**
  * 检查练习答题的答案正确性
  */
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Enumeration;
+=======
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Enumeration;
+
+>>>>>>> origin/master
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 import cn.dmego.domain.WrongPro;
 import cn.dmego.service.WrongProService;
 
