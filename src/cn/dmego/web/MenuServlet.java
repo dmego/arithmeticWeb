@@ -16,14 +16,19 @@ public class MenuServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		//---解决乱码问题---
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=utf-8");
 		
 		String hasMD = request.getParameter("hasMD");
 		String hasFS = request.getParameter("hasFS");
+		String hasGD = request.getParameter("hasGD");
 		int Range = Integer.parseInt(request.getParameter("Range")) ;
 		int Num = Integer.parseInt(request.getParameter("Num"));
+		int Numsy = Integer.parseInt(request.getParameter("Numsy"));
 		ProAns[] proBean = new ProAns[Num]; 
-		proBean = service.produce(hasMD, hasFS, Range, Num); //生成题目
-		                                                         HttpSession session = request.getSession(); 
+		proBean = service.produce(hasMD, hasFS,hasGD, Range, Num,Numsy); //生成题目
+		HttpSession session = request.getSession(); 
 		session.setAttribute("Num", Num); 
 		session.setAttribute("proBean", proBean);
 		response.sendRedirect(request.getContextPath()+"/Answer.jsp"); //重定向到答题页面	

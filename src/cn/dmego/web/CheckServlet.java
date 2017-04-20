@@ -1,14 +1,14 @@
 package cn.dmego.web;
-
+/**
+ * 检查在线答题的答案正确性
+ */
 import java.io.IOException;
 import java.util.Enumeration;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import cn.dmego.domain.ProAns;
 import cn.dmego.service.ProAnsService;
 

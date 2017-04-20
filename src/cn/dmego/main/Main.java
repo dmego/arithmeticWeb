@@ -16,8 +16,9 @@ import cn.dmego.produce.ProperFra;
 public class Main {
 	static int Num = 10; //题目数量
 	static int Range = 10; //数值范围
+	static int Numsy = 2;
 	static String function = "3";  //选择菜单功能项
-	static String hasMD = "",hasFS ="";  //标记是否有乘除，是否有真分数
+	static String hasMD = "",hasFS ="",hasGD="";  //标记是否有乘除，是否有真分数
 	static String answer = ""; //用户输入的答案
 	static String result = ""; //程序计算出来的正确答案
 	static String problem =""; //生成的随机表达式
@@ -48,6 +49,10 @@ public class Main {
 			hasMD = strPut.next();
 			System.out.print("~~~是否有真分数参与运算（Y/N 或者 y/n）：");
 			hasFS = strPut.next();
+			System.out.print("~~~运算符个数是否固定（Y/N 或者 y/n）：");
+			hasGD = strPut.next();
+			System.out.print("~~~请输入运算符个数：");
+			Numsy = intPut.nextInt();
 			System.out.print("~~~请输入出题数值范围：");
 			Range = intPut.nextInt();
 			System.out.print("~~~请输入出题数量：");
@@ -108,9 +113,10 @@ public class Main {
 		if(function.equals("1")) {
 			mpd.resert(); //重置数据表
 			for(int i = 0; i< Num;i++){
-					String[] array = cre.proArrary( Range, hasMD, hasFS); //生成一个运算符+数字的数组
+					int grade = 0;
+					String[] array = cre.proArrary( Range, hasMD, hasFS,hasGD,Numsy); //生成一个运算符+数字的数组
 			        BinaryTree tree = new BinaryTree(array); //把数组作为参数传入生成一棵二叉树的方法
-			        result = tree.CalAndVal(); //计算正确结果，得到的是假分数
+			        result = tree.CalAndVal(grade); //计算正确结果，得到的是假分数
 			        result = fractin.falseToTrue(result); //将结果的假分数化简为带分数
 			        //生成的题目字符串（必须放在计算结果后，因为在计算结果时，该树结构还会因为 负数 或者 除数为0 而变化）
 			        problem = tree.toString(); 

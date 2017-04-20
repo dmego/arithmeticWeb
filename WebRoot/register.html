@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>注册</title>
+		<link rel="icon" href="favicon.ico">
+		<!-- JqueryUI -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- Awesome font icons -->
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen">
+		<!-- Owlcoursel -->
+		<link rel="stylesheet" type="text/css" href="css/owl-coursel/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="css/owl-coursel/owl.transitions.css">
+		<!-- Magnific-popup -->
+		<link rel="stylesheet" type="text/css" href="css/magnific-popup/magnific-popup.css">
+		<!-- Style -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+		<!-- Fw -->
+		<link rel="stylesheet" type="text/css" href="css/fw.css" media="screen">
+	</head>
+	<body>
+<div class="preloader">
+			<i class="fa fa-spinner"></i>
+		</div>
+		<header>
+			<div class="container">
+				<!-- Top menu -->
+				<div class="row m-t-15">
+					<div class="col-sm-2 col-md-4 hidden-xs">
+						<div class="cloud-3"></div>
+					</div>
+					<div class="col-sm-4 col-md-3">
+					</div>
+					<div class="col-sm-6 col-md-5 hidden-xs">
+						<ul class="list-inline pull-right m-t-15">
+							
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">我的账户 <span class="caret"></span></a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li><a href="login.html">登录</a></li>
+									<li><a href="register.html">注册</a></li>
+									<li><a href="#">注销</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-2">
+						<!-- Logo -->
+						<a href="index.jsp" class="logo">
+							<img src="images/logo.png" alt="logo">
+						</a>
+					</div>	
+				</div>
+		</header>
+		<!-- breadcrumb -->
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="index.jsp"><i class="fa fa-home m-r-5"></i>主页</a></li>
+				<li>注册</li>
+			</ul>
+		</div>
+		<!-- Register -->
+		<section class="m-t-0">
+			<div class="container">
+				<div class="thumb p-30">          
+					<div id="content">      
+						<h3 class="title">新用户注册</h3>
+						<p>如果你已经有一个账户，请直接在<a href="login.html" class="color-2">登录界面</a>登录.</p>
+						<form action="/arithmeticWeb/servlet/RegistServlet" method="post"  class="form-horizontal">
+							<fieldset id="account">
+								<legend>你的个人信息</legend>
+									
+									<!--form-group-->
+									<div class="form-group required">
+										<label class="col-sm-2 control-label" for="input-firstname">用户名</label>
+										<div class="col-sm-10">
+											<input type="text" name="username" value="" placeholder="账户名" id="input-firstname" class="form-control form-item">
+										</div>
+									</div>
+									<!--form-group-->
+									<div class="form-group required">
+										<label class="col-sm-2 control-label" for="input-password">密码</label>
+										<div class="col-sm-10">
+											<input type="password" name="password" value="" placeholder="密码" id="input-password" class="form-control form-item">
+										</div>
+									</div>
+									<!--form-group-->
+									<div class="form-group required">
+										<label class="col-sm-2 control-label" for="input-confirm">确认密码</label>
+										<div class="col-sm-10">
+											<input type="password" name="confirm" value="" placeholder="确认密码" id="input-confirm" class="form-control form-item">
+										</div>
+									</div>
+						
+									<!--form-group-->
+								</fieldset>
+							<fieldset>
+							<legend>时事通讯</legend>
+								<!--form-group-->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">订阅</label>
+									<div class="col-sm-10">
+										<label class="radio-inline">
+											<input type="radio" name="newsletter" value="1">
+											是
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="newsletter" value="0" checked="checked">
+											否
+										</label>
+									</div>
+								</div>
+							</fieldset>
+							<div class="buttons">
+								<div class=""> 
+									<input type="checkbox" name="agree" class="m-r-10" value="1"> 我已阅读并同意
+									<a href="#" class="color-2"><b>服务条款和隐私政策</b></a>                       
+									<br/>
+									<button type="submit" class="btn ht-btn bg-3 m-t-30">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Process -->
+        <section class="process">
+            <div class="container">
+                <div class="row m-l-r-5">
+                    <div class="col-sm-6 col-md-3 p-5"> 
+                        <div class="media ht-media">
+                            <div class="media-left">
+                                <i class="fa fa-cogs color-3"></i>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading color-3">知识改变命运<br>
+                                勤奋创造未来</h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 p-5"> 
+                        <div class="media ht-media">
+                            <div class="media-left">
+                                <i class="fa fa-send color-7"></i>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading color-7">不是不可能<br>
+                                只是暂时还没成功</h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 p-5"> 
+                        <div class="media ht-media">
+                            <div class="media-left">
+                                <i class="fa fa-car color-4"></i>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading color-4">我是最棒的<br>
+                                我一定会成功</h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 p-5"> 
+                        <div class="media ht-media">
+                            <div class="media-left">
+                                <i class="fa fa-ship color-5"></i>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading color-5">忘掉失败<br>
+                                牢记失败中的教训</h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<!-- Footer -->
+        <footer class="color-inher">
+            <div class="bot-pie"></div>
+            <div class="footer-bt">
+                <div class="container">
+                    <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="index.jsp">答题网</a></p>
+                </div>
+            </div>
+        </footer>
+		<!-- jQuery -->
+		<script src="js/jquery/jquery-2.2.4.min.js"></script>
+		<!-- JqueryUI -->
+		<script src="js/jquery/jquery-ui.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- Owl-coursel -->
+		<script src="js/owl-coursel/owl.carousel.js"></script>
+		<!-- Magnific-popup -->
+		<script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<!-- Script -->
+		<script src="js/script.js"></script>
+	</body>
+</html>
+

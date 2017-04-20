@@ -67,34 +67,38 @@ public class TreeNode {
 		 * 计算以该结点为根的表达式运算结果，并以字符串形式返回计算结果
 		 * @return
 		 */
-		public String getResult(){
+		public String getResult(int g){
 			ProperFra fractin = new ProperFra();
 	        if(hasChild()){  
 	            switch(data){  
 		                case "+": 		                		
-		                		return fractin.opGrsAdd(getLchild().getResult(), getRchild().getResult());		                		
+		                		return fractin.opGrsAdd(getLchild().getResult(g), getRchild().getResult(g));		                		
 		                case "-":  		                	
-			                	if( hasSubt( fractin.opGrsSubt(getLchild().getResult(), getRchild().getResult()) ) ) {
+			                	if( hasSubt( fractin.opGrsSubt(getLchild().getResult(g), getRchild().getResult(g)) ) ) {
 			                			setChild(getRchild(), getLchild()); //如果减法运算结果为负数，则只需要将左右孩子交换一下就行了
 			                	}
-			                	return fractin.opGrsSubt(getLchild().getResult(), getRchild().getResult());		                    
+			                	return fractin.opGrsSubt(getLchild().getResult(g), getRchild().getResult(g));		                    
 		                case "×": 
-		                		return fractin.opGrsMult(getLchild().getResult(), getRchild().getResult());  		
+		                		return fractin.opGrsMult(getLchild().getResult(g), getRchild().getResult(g));  		
 		                case "÷":  
-			                    if(getRchild().getResult().equals("0")){  //除数是0的情况
+			                    if(getRchild().getResult(g).equals("0")){  //除数是0的情况
 				                        if(data.equals("÷")){ 
-				                        	if(!getLchild().getResult().equals("0")){ //当除数为 0 时,且被除数不为0时
+				                        	if(!getLchild().getResult(g).equals("0")){ //当除数为 0 时,且被除数不为0时
 				                        		setChild(getRchild(), getLchild()); //当除数为 0 时，交换左右孩子，被除数为 0 ，结果为 0  			            
-				                        	}else if(getLchild().getResult().equals("0")){//如果除数与被除数都为0，则
+				                        	}else if(getLchild().getResult(g).equals("0")){//如果除数与被除数都为0，则从新生成一个符号
 				                        		String symbol[] = {"+","-","×","÷"};
 				                        		int symNum = (int) (Math.random()* 4 );
 				                        		data = symbol[symNum];
 				                        	}
-				                        	return this.getResult();  
+				                        	return this.getResult(g);  
 				                        }  
 				                       
 			                    } else 
-			                    	return fractin.opGrsDivi(getLchild().getResult(), getRchild().getResult());       
+			                    	if(g == 3 || g ==4){
+			                    		return fractin.opIntDivInt(getLchild().getResult(g), getRchild().getResult(g));
+			                    	}else{
+			                    		return fractin.opGrsDivi(getLchild().getResult(g), getRchild().getResult(g));
+			                    	}
 		            }  
 	        }   
 	        return data;  //如果该结点没有孩子，说明该结点是叶子，结果返回该叶子结点的值

@@ -21,8 +21,8 @@ public class BinaryTree {
 	     return str;  
     }  
 	
-	 public String CalAndVal(){  
-	      return root.getResult();  
+	 public String CalAndVal(int grade){  
+	      return root.getResult(grade);  
 	 }  
 	 /**
 	  * ´´½¨¶þ²æÊ÷

@@ -25,7 +25,7 @@ public class MysqlProAnsDao  implements ProAnsDao{
 				ps.setString(2, pas[i].getProblem());
 				ps.setString(3, pas[i].getRightAns());
 				ps.setString(4, pas[i].getYourAns());
-				ps.setInt(5, pas[i].getCheck());
+				ps.setInt(5, pas[i].getChecks());
 				ps.executeUpdate();
 			}
 		}catch (Exception e) {
@@ -50,7 +50,7 @@ public class MysqlProAnsDao  implements ProAnsDao{
 				ps.setString(2, pas.get(i).getProblem());
 				ps.setString(3, pas.get(i).getRightAns());
 				ps.setString(4, pas.get(i).getYourAns());
-				ps.setInt(5, pas.get(i).getCheck());
+				ps.setInt(5, pas.get(i).getChecks());
 				ps.executeUpdate();
 			}
 		}catch (Exception e) {
@@ -74,7 +74,7 @@ public class MysqlProAnsDao  implements ProAnsDao{
 			ps.setString(2, proans.getProblem());
 			ps.setString(3, proans.getRightAns());
 			ps.setString(4, proans.getYourAns());
-			ps.setInt(5, proans.getCheck());
+			ps.setInt(5, proans.getChecks());
 			ps.executeUpdate();
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -96,7 +96,7 @@ public class MysqlProAnsDao  implements ProAnsDao{
 				rs  = stat.executeQuery(sql);
 				while(rs.next()){
 					ProAns newPas = new ProAns(rs.getInt("id"), rs.getString("problem"),rs.getString("rightAns"),
-							rs.getString("yourAns"), rs.getInt("check") );
+							rs.getString("yourAns"), rs.getInt("checks") );
 					pas.add(newPas);
 				}
 			}catch (Exception e) {

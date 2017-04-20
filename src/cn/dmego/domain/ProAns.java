@@ -9,14 +9,14 @@ public class ProAns {
 	private String problem ; //题目的算术表达式
 	private String rightAns ; //程序计算出的正确答案
 	private String yourAns ;  //用户输入的答案
-	private int check;  //记录用户该题是否答题正确
+	private int checks;  //记录用户该题是否答题正确
 	public ProAns(){}
-	public ProAns(int id, String problem,String rightAns, String yourAns, int check) {
+	public ProAns(int id, String problem,String rightAns, String yourAns, int checks) {
 		this.id = id;
 		this.problem = problem;
 		this.rightAns = rightAns;
 		this.yourAns = yourAns;
-		this.check = check;
+		this.checks = checks;
 	}
 	
 	public int getId() {
@@ -43,17 +43,17 @@ public class ProAns {
 	public void setYourAns(String yourAns) {
 		this.yourAns = yourAns;
 	}
-	public int getCheck() {
-		return check;
+	public int getChecks() {
+		return checks;
 	}
-	public void setCheck(int check) {
-		this.check = check;
+	public void setChecks(int checks) {
+		this.checks = checks;
 	}
 	 public String toString(){
 		 String temp = null;
-		 if(check == 1){
+		 if(checks == 1){
 			temp = "， 答案正确！";
-		 }else if(check == -1){
+		 }else if(checks == -1){
 			 temp = "， 答案错误！";
 		 }
 		 return "第"+id+"题："+problem+" = "+"; 正确答案："+rightAns+", 你的答案："+yourAns +temp;

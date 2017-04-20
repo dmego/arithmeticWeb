@@ -1,7 +1,5 @@
 package cn.dmego.produce;
-
 import cn.dmego.domain.Transmit;
-
 /************************
  * 真分数及其操作类
  * @author dmego
@@ -141,10 +139,16 @@ public class ProperFra {
 				return simplify(midMax, midMin);
 			}
 		
-		
-		
-	
-
-
-
+		//求两个整数相除，有余数
+		public String opIntDivInt(String data1,String data2) {
+			int data11 = Integer.parseInt(data1);
+			int data22 = Integer.parseInt(data2);
+			int remainder = data11 % data22;
+			int quotient = (data11-remainder) / data22;
+			if(remainder == 0) {
+				return quotient +"";
+			}else {
+				return quotient + "......" + remainder;
+			}
+		}
 }

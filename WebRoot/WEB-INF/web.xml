@@ -9,6 +9,46 @@
     <servlet-name>CheckServlet</servlet-name>
     <servlet-class>cn.dmego.web.CheckServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>indexServlet</servlet-name>
+    <servlet-class>cn.dmego.web.indexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HistoryServlet</servlet-name>
+    <servlet-class>cn.dmego.web.HistoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>checkWrServlet</servlet-name>
+    <servlet-class>cn.dmego.web.checkWrServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OnlineServlet</servlet-name>
+    <servlet-class>cn.dmego.web.OnlineServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GradeServlet</servlet-name>
+    <servlet-class>cn.dmego.web.GradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.dmego.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>cn.dmego.web.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>cn.dmego.web.RegistServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
 
 
   <servlet-mapping>
@@ -19,5 +59,40 @@
     <servlet-name>CheckServlet</servlet-name>
     <url-pattern>/servlet/CheckServlet</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+    <servlet-name>indexServlet</servlet-name>
+    <url-pattern>/servlet/indexServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HistoryServlet</servlet-name>
+    <url-pattern>/servlet/HistoryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>checkWrServlet</servlet-name>
+    <url-pattern>/servlet/checkWrServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OnlineServlet</servlet-name>
+    <url-pattern>/servlet/OnlineServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GradeServlet</servlet-name>
+    <url-pattern>/servlet/GradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/servlet/RegistServlet</url-pattern>
+  </servlet-mapping>
+  
+ <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file> 
+  </welcome-file-list>
 </web-app>

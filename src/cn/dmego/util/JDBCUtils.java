@@ -32,7 +32,7 @@ public class JDBCUtils {
 	 */
 	public static Connection getConn() throws Exception{
 		Class.forName(prop.getProperty("driver"));
-		return DriverManager.getConnection(prop.getProperty("url"), prop.getProperty("user"), prop.getProperty("password"));
+		return DriverManager.getConnection(prop.getProperty("url"), prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	/**
